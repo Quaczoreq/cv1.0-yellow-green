@@ -73,3 +73,27 @@ main {
   color: var(--muted-text);
   background: rgba(90, 86, 56, 0.9);
 }
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0.85rem 0.8rem;
+  }
+
+  main {
+    padding: 1.2rem 0 1.6rem;
+  }
+
+  .site-header {
+    padding: 0.9rem 0;
+  }
+
+  .site-footer {
+    padding: 0.8rem 0;
+  }
+
+  body::before {
+    position: absolute;
+    min-height: 100vh;
+    opacity: 0.62;
+  }
+}

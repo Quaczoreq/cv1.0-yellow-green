@@ -54,7 +54,7 @@ h2 {
 
 .accordion-header:hover {
   background: linear-gradient(145deg, rgba(247, 232, 131, 0.98), rgba(233, 215, 97, 0.98));
-  border: 2px solid rgba(242, 113, 7, 0.7);
+  border: 2px solid rgba(89, 220, 216, 0.7);
   box-shadow: 0 10px 24px rgba(15, 24, 12, 0.26);
   color: #1f281d;
 }
@@ -287,8 +287,58 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .site-header h1 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-top: 0.15rem;
+  }
+
+  .accordion {
+    margin-bottom: 0.65rem;
+  }
+
   .accordion-header,
   h2 {
     padding: 0.62rem 0.72rem;
+    font-size: 1rem;
+  }
+
+  .nested-accordion-header {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.62rem;
+  }
+
+  .accordion-content {
+    padding: 0 0.55rem;
+  }
+
+  .accordion.active .accordion-content {
+    max-height: 2500px;
+    padding: 0.72rem 0.55rem 0.82rem;
+  }
+
+  .nested-accordion.active .nested-accordion-content {
+    max-height: 900px;
+  }
+
+  .accordion:first-of-type .accordion-content > p,
+  .accordion-content > ul,
+  .nested-accordion-content > p,
+  .nested-accordion-content > ul {
+    padding: 0.72rem 0.76rem;
+  }
+
+  .accordion-content > ul,
+  .nested-accordion-content > ul {
+    padding-left: 1.25rem;
+  }
+
+  .submit-btn {
+    width: 100%;
   }
 }
