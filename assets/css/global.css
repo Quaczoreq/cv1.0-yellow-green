@@ -1,43 +1,47 @@
 /* Global styles and simple reset */
 :root {
-  --bg: #9cb4b4;
-  --text: #ffffff;
-  --accent: #374450;
-  --container-width: 900px;
+  --bg: #e6d25c;
+  --text: #1b2218;
+  --muted-text: #e0ea9b;
+  --accent: #1f281d;
+  --border: rgba(23, 30, 20, 0.3);
+  --container-width: 1020px;
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html { height: 100%; background-color: var(--bg); }
+body { min-height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  z-index: 0;
 }
-
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../images/cvBg.jpg');
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/bg1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 0.7;
+  pointer-events: none;
   z-index: -1;
 }
 
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.1rem 1.15rem;
 }
 
 a { 
@@ -49,23 +53,23 @@ h1, h2, h3 { margin: 0 0 .5rem; }
 p { margin: 0 0 1rem; }
 
 main { 
-  padding: 2rem 0;
-  margin-left: 3%;
-  margin-right: 3%;
+  padding: 1.75rem 0 2.3rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 .site-header { 
-  background: #3f444e; 
-  border: 2px solid #090909;
-  padding: .75rem 0; 
-  border-bottom: 1px solid #ffffff; 
+  background: linear-gradient(160deg, rgba(40, 49, 47, 0.94), rgba(43, 56, 44, 0.96));
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 14px 28px rgba(17, 24, 14, 0.22);
+  padding: 1.1rem 0; 
 }
 .site-footer { 
   padding: 1rem 0;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
-  border-top: 1px solid #eee; 
+  border-top: 1px solid var(--border); 
   font-size: .9rem;
-  color: #d3d3d3;
-  background-color: rgba(63, 68, 78, 0.8);
+  color: var(--muted-text);
+  background: rgba(90, 86, 56, 0.9);
 }
