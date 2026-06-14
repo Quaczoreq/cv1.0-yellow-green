@@ -1,4 +1,10 @@
 // Accordion functionality
+function closeNestedAccordions(scope = document) {
+  scope.querySelectorAll('.nested-accordion.active').forEach(nestedAccordion => {
+    nestedAccordion.classList.remove('active');
+  });
+}
+
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const accordion = header.parentElement;
@@ -6,11 +12,18 @@ document.querySelectorAll('.accordion-header').forEach(header => {
 
     document.querySelectorAll('.accordion.active').forEach(openAccordion => {
       if (openAccordion !== accordion) {
+        closeNestedAccordions(openAccordion);
         openAccordion.classList.remove('active');
       }
     });
 
-    accordion.classList.toggle('active', !isActive);
+    if (isActive) {
+      closeNestedAccordions(accordion);
+      accordion.classList.remove('active');
+      return;
+    }
+
+    accordion.classList.add('active');
   });
 });
 
@@ -32,6 +45,14 @@ document.querySelectorAll('.nested-accordion-header').forEach(header => {
 
     nestedAccordion.classList.toggle('active', !isActive);
   });
+});
+
+document.addEventListener('click', (event) => {
+  if (event.target.closest('.accordion')) {
+    return;
+  }
+
+  closeNestedAccordions();
 });
 
 // EmailJS Configuration
