@@ -10,7 +10,16 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/projects.css">
 </head>
-<body>
+<body class="project-page">
+  <div class="project-nav-bar">
+    <div class="container">
+      <nav class="project-nav" aria-label="Project sections">
+        <a class="project-nav-link is-active" href="static-web-apps.html" aria-current="page">Static Web Apps</a>
+        <a class="project-nav-link" href="projects.html">Architecture Solutions</a>
+        <a class="project-nav-link" href="work-in-progress.html">Work in Progress</a>
+      </nav>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container projects-header">
       <h1>Static Web Apps</h1>
@@ -28,41 +37,51 @@
 
     <section class="projects-grid" aria-label="Static web app projects">
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Kayak Sale app preview">
         <h2>Kayak Sale</h2>
-        <p>Marketing-style static web app with a simple layout and a clear call to action.</p>
+        <p>Simple promo app for a seasonal kayak sale.
+          <span class="project-more-text">It includes product highlights, lightweight navigation, and a focused booking call-to-action for mobile and desktop visitors.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
 
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
-        <h2>AZ-900 Flash Cards</h2>
-        <p>Revision app for Azure fundamentals with a lightweight interface and straightforward navigation.</p>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="AZ-900 flash cards app preview">
+        <h2>AZ-900 Cards</h2>
+        <p>Quick revision cards for Azure fundamentals topics.
+          <span class="project-more-text">The layout supports rapid question review, key concept recall, and self-testing in short study sessions.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
 
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
-        <h2>Password Generator</h2>
-        <p>Small utility app for creating secure passwords with an easy-to-use static front end.</p>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Password generator app preview">
+        <h2>Password Tool</h2>
+        <p>Utility page for generating secure random passwords.
+          <span class="project-more-text">Users can generate stronger combinations quickly and copy results for safer account setup and credential refresh workflows.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
 
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
-        <h2>The Cloud Workshop Studio</h2>
-        <p>Learning and community website presenting cloud workshops, resources, and project information.</p>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Cloud Workshop Studio website preview">
+        <h2>Cloud Workshop</h2>
+        <p>Community site for workshops, resources, and events.
+          <span class="project-more-text">The platform shares upcoming sessions, practical learning paths, and reference material for learners entering cloud roles.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© 2026 Katarzyna Opozda</div>
+    <div class="container footer-inline">
+      <a class="footer-cloud-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">
+        <span class="footer-cloud-icon" aria-hidden="true">&#9729;</span>
+      </a>
+      <span>© 2026 Katarzyna Opozda</span>
+    </div>
   </footer>
+  <script src="assets/js/projects.js"></script>
 </body>
 </html>

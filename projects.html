@@ -10,7 +10,16 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/projects.css">
 </head>
-<body>
+<body class="project-page">
+  <div class="project-nav-bar">
+    <div class="container">
+      <nav class="project-nav" aria-label="Project sections">
+        <a class="project-nav-link" href="static-web-apps.html">Static Web Apps</a>
+        <a class="project-nav-link is-active" href="projects.html" aria-current="page">Architecture Solutions</a>
+        <a class="project-nav-link" href="work-in-progress.html">Work in Progress</a>
+      </nav>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container projects-header">
       <h1>Projects</h1>
@@ -28,33 +37,42 @@
 
     <section class="projects-grid" aria-label="Architecture projects">
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
-        <h2>Architecture Project 1</h2>
-        <p>Replace this section with a description of the architecture, goals, and the main components shown in the image.</p>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Cloud landing zone architecture preview">
+        <h2>Landing Zone</h2>
+        <p>Core architecture for secure multi-workload hosting.
+          <span class="project-more-text">It defines baseline governance, networking, identity controls, and deployment standards for scalable project onboarding.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
 
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
-        <h2>Architecture Project 2</h2>
-        <p>Use this card for a second architecture example. Add notes about platform choice, scaling, security, or data flow.</p>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Hybrid network architecture preview">
+        <h2>Hybrid Network</h2>
+        <p>Design for on-prem and cloud connectivity at scale.
+          <span class="project-more-text">The model maps secure routing, private connectivity, and segmentation patterns for reliable enterprise integration.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
 
       <article class="project-card">
-        <div class="project-image-slot">
-          <span>Insert image here</span>
-        </div>
-        <h2>Architecture Project 3</h2>
-        <p>Use this card for another design or implementation. You can describe the services, user journey, or deployment approach.</p>
+        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Zero trust security architecture preview">
+        <h2>Zero Trust</h2>
+        <p>Security-first architecture with identity-led controls.
+          <span class="project-more-text">It prioritizes least privilege, device compliance checks, and continuous verification across user and workload access points.</span>
+        </p>
+        <button type="button" class="read-more-btn">Read More</button>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© 2026 Katarzyna Opozda</div>
+    <div class="container footer-inline">
+      <a class="footer-cloud-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">
+        <span class="footer-cloud-icon" aria-hidden="true">&#9729;</span>
+      </a>
+      <span>© 2026 Katarzyna Opozda</span>
+    </div>
   </footer>
+  <script src="assets/js/projects.js"></script>
 </body>
 </html>

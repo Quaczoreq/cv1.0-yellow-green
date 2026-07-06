@@ -45,23 +45,23 @@ h2 {
   align-items: center;
   gap: 0.5rem;
   border: 1px solid rgba(48, 61, 41, 0.45);
-  background: linear-gradient(145deg,  rgba(40, 49, 47, 0.94), rgba(170, 183, 74, 0.96));
+  background: rgb(49, 64, 44);
   padding: 0.72rem 0.9rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(16, 24, 13, 0.24);
-  color: #fff67a;
+  color: #ffffff;
 }
 
 .accordion-header:hover {
-  background: linear-gradient(145deg, rgba(247, 232, 131, 0.98), rgba(233, 215, 97, 0.98));
-  border: 2px solid rgba(89, 220, 216, 0.7);
+  background: rgb(49, 64, 44);
+  border: 2px solid #dbc740;
   box-shadow: 0 10px 24px rgba(15, 24, 12, 0.26);
-  color: #1f281d;
+  color: #f4e898;
 }
 
 .accordion.active .accordion-header {
-  background: linear-gradient(145deg, rgba(53, 75, 48, 0.98), rgba(43, 56, 44, 0.96));
-  border: 1px solid #dbc740;
+  background: rgb(49, 64, 44);
+  border: 2px solid rgb(230, 144, 24);
   color: #f4e898;
   box-shadow: 0 10px 24px rgba(9, 16, 8, 0.4);
 }
@@ -69,16 +69,13 @@ h2 {
   display: inline-block;
   transition: transform 0.3s ease;
   font-size: 0.76rem;
-  color: #c7bb52;
+  color: #ffffff;
 }
 .accordion.active .triangle {
-  color: #f5e682;
+  color: #f4e898;
   transform: rotate(90deg);
 }
 .nested-accordion {
-  --nested-60: rgba(249, 237, 156, 0.95);
-  --nested-30: rgba(241, 224, 110, 0.97);
-  --nested-30-hover: rgba(248, 232, 132, 0.98);
   --nested-10: #24301f;
   margin-top: 0rem;
   margin-bottom: 0.42rem;
@@ -89,8 +86,8 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--nested-30);
-  color: #28231d;
+  background: rgb(54 97 57 / 90%);
+  color: #f4e898;
   padding: 0.56rem 0.72rem;
   border-radius: 10px;
   border: 1px solid rgba(60, 74, 50, 0.5);
@@ -99,18 +96,18 @@ h2 {
   margin: 0;
 }
 .nested-accordion-header:hover {
-  background: var(--nested-30-hover);
+  background: rgb(230, 144, 24);
   box-shadow: 0 6px 14px rgba(16, 24, 13, 0.24);
   border: 1px solid rgba(52, 65, 43, 0.68);
 }
 .nested-accordion-header .triangle {
   display: inline-block;
   transition: transform 0.3s ease;
-  color: var(--nested-10);
+  color: #f4e898;
 }
 
 .nested-accordion-header:hover .triangle {
-  color: var(--nested-10);
+  color: #f4e898;
 }
 .nested-accordion-content {
   max-height: 0;
@@ -156,17 +153,14 @@ h2 {
 }
 
 .nested-accordion.active .nested-accordion-header {
-  background: linear-gradient(145deg, rgba(255, 170, 0, 0.98), rgba(230, 144, 24, 0.98));
+  background: rgb(230, 144, 24);
   border: 1px solid rgba(218, 199, 72, 0.85);
   box-shadow: 0 8px 18px rgba(8, 15, 7, 0.35);
-  color: var(--nested-10);
+  color: #f4e898;
 }
 
 .nested-accordion.active .nested-accordion-header .triangle {
-  color: var(--nested-10);
-}
-
-.nested-accordion.active .nested-accordion-header .triangle {
+  color: #f4e898;
   transform: rotate(-90deg);
 }
 
@@ -256,8 +250,13 @@ h2 {
 
 .project-tile:hover {
   transform: translateY(-2px);
+  border: 2px solid rgb(230, 144, 24);
   box-shadow: 0 14px 26px rgba(15, 24, 13, 0.28);
   filter: brightness(1.03);
+}
+
+.project-tile:active {
+  border: 2px solid rgb(230, 144, 24);
 }
 
 .project-tile-label {
