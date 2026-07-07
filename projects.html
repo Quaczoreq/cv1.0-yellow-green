@@ -17,27 +17,34 @@
         <a class="project-nav-link" href="static-web-apps.html">Static Web Apps</a>
         <a class="project-nav-link is-active" href="projects.html" aria-current="page">Architecture Solutions</a>
         <a class="project-nav-link" href="work-in-progress.html">Work in Progress</a>
+        <a class="project-nav-link project-nav-link-back" href="index.html">Back to CV</a>
       </nav>
     </div>
   </div>
   <header class="site-header">
     <div class="container projects-header">
-      <h1>Projects</h1>
+      <h1>Architecture Solutions</h1>
       <div class="header-details">
-        <p class="lead">Architecture visuals, build notes, and project summaries.</p>
+        <p class="lead">Cloud architecture concepts, infrastructure patterns, and design walkthroughs.</p>
       </div>
-      <a class="back-link" href="index.html">Back to CV</a>
     </div>
   </header>
 
   <main class="container projects-main">
     <section class="projects-intro">
-      <p>Use the card areas below to insert an image or screenshot of each architecture. The text below each image can be used for the description, purpose, or key design points.</p>
+      <p>This section collects architecture work focused on cloud design, networking, security, and platform structure. Each card can be used to show a diagram, a short summary, and the key decisions behind the solution.</p>
     </section>
 
     <section class="projects-grid" aria-label="Architecture projects">
-      <article class="project-card">
-        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Cloud landing zone architecture preview">
+      <article class="project-card project-card-flip" data-flip-card>
+        <button type="button" class="project-card-flip-toggle" aria-label="Flip Landing Zone image to show a second picture">
+          <span class="project-card-flip-face project-card-flip-front is-active">
+            <img class="project-card-image" src="assets/images/landingzone1.png" alt="Cloud landing zone architecture preview">
+          </span>
+          <span class="project-card-flip-face project-card-flip-back">
+            <img class="project-card-image" src="assets/images/landingzone2.png" alt="Cloud landing zone architecture second preview">
+          </span>
+        </button>
         <h2>Landing Zone</h2>
         <p>Core architecture for secure multi-workload hosting.
           <span class="project-more-text">It defines baseline governance, networking, identity controls, and deployment standards for scalable project onboarding.</span>
@@ -45,8 +52,15 @@
         <button type="button" class="read-more-btn">Read More</button>
       </article>
 
-      <article class="project-card">
-        <img class="project-card-image" src="assets/images/bg11.bmp" alt="Hybrid network architecture preview">
+      <article class="project-card project-card-flip" data-flip-card>
+        <button type="button" class="project-card-flip-toggle" aria-label="Flip Hybrid Network image to show a second picture">
+          <span class="project-card-flip-face project-card-flip-front is-active">
+            <img class="project-card-image" src="assets/images/hybrid1.png" alt="Hybrid network architecture preview">
+          </span>
+          <span class="project-card-flip-face project-card-flip-back">
+            <img class="project-card-image" src="assets/images/hybrid2.png" alt="Hybrid network architecture second preview">
+          </span>
+        </button>
         <h2>Hybrid Network</h2>
         <p>Design for on-prem and cloud connectivity at scale.
           <span class="project-more-text">The model maps secure routing, private connectivity, and segmentation patterns for reliable enterprise integration.</span>

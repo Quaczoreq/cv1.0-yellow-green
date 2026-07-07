@@ -225,14 +225,13 @@ h2 {
 }
 
 .project-tile {
-  --tile-overlay: linear-gradient(180deg, rgba(31, 40, 29, 0.14), rgba(31, 40, 29, 0.72));
   aspect-ratio: 1 / 1;
   width: 100%;
   min-height: 170px;
   border-radius: 12px;
   border: 1px solid rgba(45, 58, 39, 0.55);
   background-color: rgba(245, 231, 131, 0.92);
-  background-image: var(--tile-overlay);
+  background-image: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -274,15 +273,15 @@ h2 {
 }
 
 .project-tile-static {
-  background-image: var(--tile-overlay), url('../images/bg11.bmp');
+  background-image: url('../images/staticWebApp.png');
 }
 
 .project-tile-architecture {
-  background-image: var(--tile-overlay), url('../images/bg11.bmp');
+  background-image: url('../images/cloudArchitecture.png');
 }
 
 .project-tile-progress {
-  background-image: var(--tile-overlay), url('../images/bg11.bmp');
+  background-image: url('../images/work in progress.png');
 }
 
 .contact-form {

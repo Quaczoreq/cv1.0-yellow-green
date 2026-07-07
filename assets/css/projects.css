@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 0.35rem;
+  gap: 0.5rem;
 }
 
 .projects-header .header-details {
@@ -13,7 +13,8 @@
 }
 
 .project-page {
-  padding-top: 3.6rem;
+  --project-nav-offset: 4.7rem;
+  padding-top: var(--project-nav-offset);
 }
 
 .project-nav-bar {
@@ -21,25 +22,36 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(49, 64, 44, 0.96);
+  background: linear-gradient(180deg, rgba(49, 64, 44, 0.98), rgba(49, 64, 44, 0.92));
   border-bottom: 1px solid rgba(226, 179, 95, 0.45);
+  box-shadow: 0 8px 18px rgba(15, 24, 13, 0.2);
+  backdrop-filter: blur(6px);
   z-index: 1000;
 }
 
 .project-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.45rem;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0.5rem;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.55rem 0;
+}
+
+.project-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .project-nav-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.45rem 0.75rem;
+  white-space: nowrap;
+  min-height: 2.2rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 999px;
   border: 1px solid rgba(226, 179, 95, 0.7);
   background: rgba(54, 97, 57, 0.9);
@@ -59,6 +71,27 @@
   background: rgba(230, 144, 24, 0.92);
   border-color: rgb(230, 144, 24);
   color: #fff6d8;
+  box-shadow: inset 0 0 0 1px rgba(255, 246, 216, 0.4);
+}
+
+.project-nav-link-back {
+  margin-left: auto;
+  background: linear-gradient(160deg, rgba(247, 236, 153, 0.96), rgba(236, 220, 113, 0.92));
+  border-color: rgba(53, 66, 46, 0.45);
+  color: #1f281d;
+  box-shadow: inset 0 0 0 1px rgba(255, 249, 210, 0.45);
+}
+
+.project-nav-link-back:hover,
+.project-nav-link-back:active {
+  background: linear-gradient(160deg, rgba(250, 241, 172, 0.98), rgba(240, 225, 126, 0.94));
+  border-color: rgba(53, 66, 46, 0.5);
+  color: #1f281d;
+}
+
+.project-nav-link:focus-visible {
+  outline: 2px solid rgba(255, 246, 216, 0.9);
+  outline-offset: 2px;
 }
 
 .back-link {
@@ -119,6 +152,60 @@
   border-radius: 10px;
   border: 1px solid rgba(53, 66, 46, 0.42);
   background: rgba(255, 251, 227, 0.9);
+}
+
+.project-card-flip {
+  perspective: 1200px;
+}
+
+.project-card-flip-toggle {
+  position: relative;
+  width: min(100%, 210px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.project-card-flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.project-card-flip-front {
+  transform: rotateY(0deg);
+}
+
+.project-card-flip-back {
+  transform: rotateY(180deg);
+}
+
+.project-card-flip:hover .project-card-flip-front,
+.project-card-flip:focus-within .project-card-flip-front {
+  transform: rotateY(-180deg);
+}
+
+.project-card-flip:hover .project-card-flip-back,
+.project-card-flip:focus-within .project-card-flip-back {
+  transform: rotateY(0deg);
+}
+
+.project-card-flip .project-card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.project-card-flip-toggle:focus-visible {
+  outline: 2px solid rgba(230, 144, 24, 0.95);
+  outline-offset: 4px;
+  border-radius: 10px;
 }
 
 .mini-gallery {
@@ -258,11 +345,53 @@
 
 @media (max-width: 640px) {
   .project-page {
-    padding-top: 5rem;
+    --project-nav-offset: 0;
+    padding-top: var(--project-nav-offset);
+  }
+
+  .project-nav-bar {
+    position: sticky;
+    top: 0;
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
   }
 
   .projects-main {
     padding-top: 1.1rem;
+  }
+
+  .project-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    overflow-x: visible;
+    gap: 0.5rem;
+    padding: 0.55rem 0;
+    scroll-snap-type: none;
+  }
+
+  .project-nav-link {
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    font-size: 0.84rem;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.2;
+    scroll-snap-align: none;
+  }
+
+  .project-nav-link-back {
+    margin-left: 0;
+  }
+
+  .project-nav-link:hover,
+  .project-nav-link:active,
+  .project-nav-link.is-active {
+    background: rgba(230, 144, 24, 0.92);
+    border-color: rgb(230, 144, 24);
+    color: #fff6d8;
   }
 
   .projects-grid {
@@ -274,6 +403,10 @@
   }
 
   .project-card-image {
+    width: min(100%, 180px);
+  }
+
+  .project-card-flip-toggle {
     width: min(100%, 180px);
   }
 
